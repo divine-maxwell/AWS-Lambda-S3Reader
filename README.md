@@ -1,51 +1,45 @@
-# AWS Lambda S3 Reader Project
+# AWS Lambda S3 Reader
+
+A beginner AWS IAM & Lambda project that demonstrates how to securely access files in an S3 bucket using a Lambda function.
+
+---
 
 ## 📌 Project Overview
-This project demonstrates how to use **AWS Lambda** to read a file from an **S3 bucket** using Python (Boto3).  
-The Lambda function retrieves the content of a text file from S3 and returns it as output.
+This project shows how to:
+1. Create an **IAM Role** with `AmazonS3ReadOnlyAccess`.
+2. Create an **S3 Bucket** and upload a test file (`lambda-test.txt`).
+3. Create an **AWS Lambda Function** with Python 3.9 runtime to read the file.
+4. Attach the IAM Role to the Lambda function.
+5. Trigger a **test event** to verify Lambda can access the file.
 
 ---
 
-## 🛠️ Services Used
-- **AWS Lambda** – Serverless compute to run the Python code.
-- **Amazon S3** – To store and retrieve the test file.
-- **IAM** – To grant Lambda permissions to access S3.
+## 📂 Project Structure
+AWS-Lambda-S3Reader/
+│
+├── README.md <- Project Documentation
+├── lambda-test.txt <- Test file stored in S3
+├── code/
+│ └── lambda_function.py <- Python Lambda Function Code
+└── Screenshots/
+├── Lambda_output01.jpg <- Lambda execution result
+├── Lambda_output02.jpg <- Lambda console logs
+└── Lambda_test_success.png<- Successful execution proof
 
 ---
 
-## 📂 Project Steps
-1. **Created an IAM Role** with `AmazonS3ReadOnlyAccess`.
-2. **Created an S3 bucket** and uploaded `lambda-test.txt`.
-3. **Created a Lambda Function** with Python 3.9 runtime.
-4. **Attached IAM Role to Lambda** to allow S3 access.
-5. **Created a test event** in Lambda and verified the function retrieves the file content.
-
----
-
-## ✅ Test Output
-Lambda successfully returned the following file content:
-
-"This is Project 4 test file for AWS Lambda access."
-
+## ✅ Skills Demonstrated
+- AWS Lambda (Python)
+- AWS S3 Access with IAM Roles
+- Serverless Security Principles
+- GitHub Project Documentation
 
 ---
 
 ## 📸 Screenshots
-Below are key screenshots of the project:
-
-1. **Lambda Test Event Creation**
-   ![Test Event Screenshot](screenshots/lambda-test-event.png)
-
-2. **Lambda Code Execution**
-   ![Lambda Execution Screenshot](screenshots/lambda-execution.png)
-
-3. **Successful Output**
-   ![Lambda Success Output](screenshots/lambda-success-output.png)
+![Lambda Output](Screenshots/Lambda_output01.jpg)
 
 ---
 
-## 🧰 Tech Stack
-- Python 3.9
-- AWS Lambda
-- AWS S3
-- AWS IAM
+**Author:** Divine Maxwell  
+*Cloud Security / IAM Enthusiast*
